@@ -1,4 +1,5 @@
-
+ /* @next-codemod-error <suggested message> */
+/* @next-codemod-ignore */
 import React from 'react';
 import Link from 'next/link';
 
