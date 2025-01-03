@@ -1,4 +1,4 @@
- 
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -13,8 +13,8 @@ type PageProps = {
 };
 
 const Page: React.FC<PageProps> = ({ params, searchParams }) => {
-  const { id } = params; 
-  const { title, body } = searchParams;
+  const { id } = params;
+  const { title = "Default Title", body = "Default Body" } = searchParams;
 
   return (
     <div className="w-[80%] mx-auto p-11">
