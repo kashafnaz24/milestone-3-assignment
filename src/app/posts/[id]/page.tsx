@@ -1,11 +1,19 @@
- /* @next-codemod-error <suggested message> */
-/* @next-codemod-ignore */
+ 
 import React from 'react';
 import Link from 'next/link';
+type PageProps = {
+  params: {
+    id: string;
+  };
+  searchParams: {
+    title: string;
+    body: string;
+  };
+};
 
-async function Page({ params , searchParams}: { params: { id: string } , searchParams: {title: string ; body:string}}) {
-  const { id } = await params
-  const { title , body } = await searchParams
+const Page: React.FC<PageProps> = async ({ params, searchParams }) => {
+  const { id } = await  params;
+  const { title , body } = await searchParams;
     return (
       <div className='w-[80%] mx-auto p-11'>
           <h1 className=' my-5 text-[35px] font-mono'>Post ID: {id}</h1>
